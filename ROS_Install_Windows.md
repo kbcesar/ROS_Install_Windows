@@ -19,4 +19,23 @@ choco install -y python --version 3.8.3
 
 Obs: O ROS 2 espera que a instalação do Python esteja disponível no diretório C:\python38.
 
+### Visual C++
+
+```
+choco install -y vcredist2013 vcredist140
+```
+
+### OpenSSL
+
+```
+choco install -y openssl --version 1.1.1.2100
+```
+
+Este comando define uma variável de ambiente que persiste entre as sessões: 
+```
+setx /m OPENSSL_CONF "C:\Program Files\OpenSSL-Win64\bin\openssl.cfg"
+```
+
+Será necessário adicionar às variáveis de ambiente em PATH: ```C:\Program Files\OpenSSL-Win64\bin\```
+
 
