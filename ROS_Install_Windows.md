@@ -81,4 +81,38 @@ choco install -y -s <PATH\TO\DOWNLOADS> asio cunit eigen tinyxml-usestl tinyxml2
 
 Obs: substitua <PATH\TO\DOWNLOADS> pela pasta onde foram baixados os pacotes.
 
+Você também deve instalar algumas dependências do Python para ferramentas de linha de comando: 
+```
+python -m pip install -U catkin_pkg cryptography empy ifcfg lark-parser lxml netifaces numpy opencv-python pyparsing pyyaml setuptools rosdistro
+```
 
+### Dependências do RQt
+
+```
+python -m pip install -U pydot PyQt5
+```
+
+```
+choco install graphviz
+```
+
+Você precisará adicionar a pasta bin do Graphviz C:\Program Files\Graphviz\bin ao seu PATH, navegando até 'Editar as variáveis de ambiente do sistema'.
+
+## Instalando o ROS 2
+
+Vá até a [página de releases](https://github.com/ros2/ros2/releases)
+
+Faça o download do pacote para windows ```ros2-jazzy-20240919-windows-release-amd64.zip```
+
+ Obs: caso tenha alguma versão mais recente do ROS 2, realize o download da mesma.
+
+ - Descompacte o arquivo zip em algum lugar (vamos assumir C:\dev\ros2_jazzy).
+
+## Configuração do ambiente
+
+Inicie um shell de comando e carregue o arquivo de configuração do ROS 2 para configurar o espaço de trabalho:
+```
+call C:\dev\ros2_jazzy\local_setup.bat
+```
+
+Obs: garanta que o arquivo esteja no caminho correto informado. Caso esteja diferente, verifica e substitua após call no comando anterior.
