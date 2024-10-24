@@ -86,14 +86,14 @@ Você também deve instalar algumas dependências do Python para ferramentas de 
 python -m pip install -U catkin_pkg cryptography empy ifcfg lark-parser lxml netifaces numpy opencv-python pyparsing pyyaml setuptools rosdistro
 ```
 
-### Instalação do QT5
+### Instalação do QT6
 
-Baixe a versão [neste link](https://www.qt.io/offline-installers). Execute o instalador e certifique-se de selecionar o componente MSVC 2017 64-bit sob a árvore Qt -> Qt 5.12.12.
+Baixe a versão 6 [neste link](https://www.qt.io/offline-installers). Execute o instalador e certifique-se de selecionar o componente MSVC 2022 64-bit sob a árvore Qt -> Qt 6.8.0.
 
-Por fim, em uma janela cmd.exe com privilégios de administrador, defina essas variáveis de ambiente. Os comandos abaixo assumem que você o instalou no local padrão C:\Qt:
+Por fim, em uma janela de comando com privilégios de administrador, defina essas variáveis de ambiente. Os comandos abaixo assumem que você o instalou no local padrão C:\Qt:
 ```
-setx /m Qt5_DIR C:\Qt\Qt5.12.12\5.12.12\msvc2017_64
-setx /m QT_QPA_PLATFORM_PLUGIN_PATH C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\plugins\platforms
+setx /m Qt6_DIR C:\Qt\Qt6.8.0\6.8.0\msvc2022_64
+setx /m QT_QPA_PLATFORM_PLUGIN_PATH C:\Qt\Qt6.8.0\6.8.0\msvc2022_64\plugins\platforms
 ```
 
 Este caminho pode mudar com base na versão do MSVC instalada, no diretório onde o Qt foi instalado e na versão do Qt instalada.
