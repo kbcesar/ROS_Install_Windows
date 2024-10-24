@@ -46,7 +46,7 @@ Baixar a versão 2019 do Visual Studio Code. [Você pode baixar o instalador dir
 
 Você pode baixar uma versão pré-compilada do OpenCV 3.4.6 [aqui](https://github.com/ros2/ros2/releases/download/opencv-archives/opencv-3.4.6-vc16.VS2019.zip).
 
-Supondo que você o descompactou em C:\opencv, digite o seguinte no Prompt de Comando (requer privilégios de Admin):
+Supondo que você o descompactou em C:\opencv, digite o seguinte no Prompt de Comando (requer privilégios de Administrador):
 ```
 setx /m OpenCV_DIR C:\opencv
 ```
@@ -93,7 +93,7 @@ Baixe a versão 6 [neste link](https://www.qt.io/offline-installers). Execute o 
 Por fim, em uma janela de comando com privilégios de administrador, defina essas variáveis de ambiente. Os comandos abaixo assumem que você o instalou no local padrão C:\Qt:
 ```
 setx /m Qt6_DIR C:\Qt\Qt6.8.0\6.8.0\msvc2022_64
-setx /m QT_QPA_PLATFORM_PLUGIN_PATH C:\Qt\Qt6.8.0\6.8.0\msvc2022_64\plugins\platforms
+setx /m QT_QPA_PLATFORM_PLUGIN_PATH C:\dev\ros2-jazzy\bin\platforms
 ```
 
 Este caminho pode mudar com base na versão do MSVC instalada, no diretório onde o Qt foi instalado e na versão do Qt instalada.
@@ -101,7 +101,7 @@ Este caminho pode mudar com base na versão do MSVC instalada, no diretório ond
 ### Dependências do RQt
 
 ```
-python -m pip install -U pydot PyQt5
+python -m pip install -U pydot PyQt6
 ```
 
 ```
