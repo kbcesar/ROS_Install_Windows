@@ -1,4 +1,4 @@
-# Instalação ROS 2 Jazz
+# Instalação ROS 2 Jazzy
 
 ## Sistema Operacional utilizado
 Windows 11
