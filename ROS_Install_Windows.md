@@ -128,3 +128,74 @@ call C:\dev\ros2_jazzy\local_setup.bat
 ```
 
 Obs: garanta que o arquivo esteja no caminho correto informado. Caso esteja diferente, verifica e substitua após call no comando anterior.
+
+# Configurando o ambiente do micro-ROS
+
+O micro-ROS é normalmente instalado usando ferramentas como o micro-ROS Agent.
+
+## 1. Instale o Python e dependências
+
+Certifique-se de que o Python 3.8 ou superior está instalado e configurado no PATH.
+Instale o colcon, que é usado para compilar pacotes do ROS 2:
+```
+pip install colcon-common-extensions
+```
+
+## 2. Configure o repositório micro_ros_setup
+
+No terminal do Windows (PowerShell ou CMD com suporte ao ROS 2):
+
+```
+mkdir micro_ros_ws
+cd micro_ros_ws
+git clone -b foxy https://github.com/micro-ROS/micro_ros_setup.git src/micro_ros_setup
+colcon build
+```
+
+Após a construção, ative o ambiente:
+
+```
+call install/setup.bat
+```
+
+## 3. Configure um agente micro-ROS
+
+Inicialize um workspace do micro-ROS: 
+
+```
+ros2 run micro_ros_setup create_agent_ws.sh
+colcon build
+```
+
+# Execute o micro-ROS Agent
+
+O agente do micro-ROS permite comunicação com dispositivos embarcados. Para iniciar o agente:
+
+```
+ros2 run micro_ros_agent micro_ros_agent serial --dev [porta_serial]
+```
+
+Obs: Substitua ```[porta_serial]``` pela porta COM usada pelo dispositivo.
+
+# Desenvolvimento no dispositivo embarcado
+
+Use a biblioteca micro-ROS Client para configurar o firmware do dispositivo embarcado.
+Ferramentas como o micro-ROS CLI ajudam na depuração e no gerenciamento.
+
+# Caso haja problema com a execução do colcon build (VisualStudioVersion is not set)
+
+Baixe e instale o Visual Studio Community Edition
+
+### Durante a instalação, selecione:
+- Desktop Development with C++.
+- Certifique-se de incluir o C++ CMake tools for Windows (nas opções do instalador).
+
+Abra um prompt de comando como Admin e execute call C:\dev\ros2_jazzy\local_setup.bat (certifique-se de que o caminho esteja correto)
+Direcione para C:\Users\```<seu-usuario>```\micro_ros_ws>
+Execute o comando: 
+
+```
+call install/setup.bat
+```
+
+Retorne para a etapa de execução do micro-ROS Agent
