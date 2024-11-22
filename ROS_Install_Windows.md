@@ -196,7 +196,7 @@ Direcione para C:\Users\ ```seu-usuario``` \micro_ros_ws
 Execute o comando: 
 
 ```
-call install/setup.bat
+colcon build
 ```
 
 Retorne para a etapa de execução do micro-ROS Agent
