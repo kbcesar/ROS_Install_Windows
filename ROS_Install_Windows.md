@@ -191,7 +191,7 @@ Baixe e instale o Visual Studio Community Edition
 - Certifique-se de incluir o C++ CMake tools for Windows (nas opções do instalador).
 
 Abra um prompt de comando como Admin e execute call C:\dev\ros2_jazzy\local_setup.bat (certifique-se de que o caminho esteja correto)
-Direcione para C:\Users\```seu-usuario```\micro_ros_ws
+Direcione para C:\Users\ ```seu-usuario``` \micro_ros_ws
 Execute o comando: 
 
 ```
