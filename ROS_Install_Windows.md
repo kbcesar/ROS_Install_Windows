@@ -200,3 +200,57 @@ colcon build
 ```
 
 Retorne para a etapa de execução do micro-ROS Agent
+
+## Adicionais
+
+```
+call C:\dev\ros2_jazzy\local_setup.bat
+```
+
+```
+pip install psutil
+```
+
+```
+pip install rosdep
+```
+
+```
+rosdep run
+```
+
+```
+rosdep update
+```
+
+Navegar para o diretório do ROS2 e executar:
+```
+rosdep install --from-paths src --ignore-src -r -y
+```
+
+c:\dev\ros2_ws>
+
+```
+pip install -U setuptools pip
+pip install -U pywin32
+```
+
+## Configurar o MicroROS Agent:
+
+ No Visual Studio Command Prompt execute:
+```
+cd c:\dev\ros2_ws
+rosdep install --from-paths src --ignore-src -r -y
+
+colcon build
+```
+
+Navegue até a pasta src dentro do seu workspace ROS 2:
+```
+cd c:\dev\ros2_ws\src
+```
+
+Clone o repositório do micro-ROS Agent:
+```
+git clone https://github.com/micro-ROS/micro-ros-agent.git
+```
